@@ -392,12 +392,12 @@ if __name__ == "__main__":
     parser.add_argument("-A", "--directory_A", type=str, help='Directory to search for images.', required=True)
     parser.add_argument("-B", "--directory_B", type=str, help='(optional) Second directory to search for images.', required=False, nargs='?', default=None)
     parser.add_argument("-Z", "--output_directory", type=str, help='(optional) Output directory for the difPy result files. Default is working dir.', required=False, nargs='?', default=None)
-    parser.add_argument("-s", "--similarity", type=type_str_int, help='(optional) Similarity grade.', required=False, nargs='?', default='normal')
+    parser.add_argument("-s", "--similarity", type=type_str_int, help='(optional) Similarity grade.', required=False, nargs='?', default='low')
     parser.add_argument("-px", "--px_size", type=int, help='(optional) Compression size of images in pixels.', required=False, nargs='?', default=50)
     parser.add_argument("-p", "--show_progress", type=bool, help='(optional) Shows the real-time progress of difPy.', required=False, nargs='?', choices=[True, False], default=True)
     parser.add_argument("-o", "--show_output", type=bool, help='(optional) Shows the comapred images in real-time.', required=False, nargs='?', choices=[True, False], default=False)
     parser.add_argument("-d", "--delete", type=bool, help='(optional) Deletes all duplicate images with lower quality.', required=False, nargs='?', choices=[True, False], default=False)
-    parser.add_argument("-D", "--silent_del", type=bool, help='(optional) Supresses the user confirmation when deleting images.', required=False, nargs='?', choices=[True, False], default=False)
+    parser.add_argument("-D", "--silent_del", type=bool, help='(optional) Supresses the user confirmation when deleting images.', required=False, nargs='?', choices=[True, False], default=True)
     args = parser.parse_args()
 
     # initialize difPy
